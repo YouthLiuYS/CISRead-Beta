@@ -1,4 +1,4 @@
-<h1 align="left"><img src="icon.png" width="48" height="48" align="absmiddle" alt="" /> CISRead</h1>
+<h1 align="left"><img src="readme-icon.svg" width="64" height="72" align="absmiddle" alt="" /> CISRead</h1>
 
 简体中文 · [English](README.en.md)
 
