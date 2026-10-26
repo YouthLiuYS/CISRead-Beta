@@ -1,14 +1,20 @@
-# PaperRead Beta
+# CISRead
 
-<img src="icon.png" alt="PaperRead 图标" width="88" />
+简体中文 · [English](README.en.md)
 
-面向英文论文阅读的 macOS 桌面工具，现开启个人非商业内测。
+<img src="icon.png" alt="CISRead 图标" width="88" />
 
-**当前版本：0.8.0-beta.1** · **macOS 13+ / Apple Silicon（M 系列芯片）**
+**CISRead**（原名 PaperRead）是 **CISArch** 团队面向英文论文阅读的 macOS 桌面工具，正在个人非商业内测。**CIS** 是团队共同品牌标识，另一款在研产品为 **CISCube**。
+
+软件已更名为 CISRead。为兼容现有下载与反馈链接，仓库地址保留 `PaperRead-Beta`。
+
+**当前公开下载：PaperRead Beta 0.8.0-beta.1** · **macOS 13+ / Apple Silicon（M 系列芯片）**
 
 [下载安装包](https://github.com/YouthLiuYS/PaperRead-Beta/releases/tag/v0.8.0-beta.1) · [安装与使用](BETA_GUIDE.md) · [反馈问题](https://github.com/YouthLiuYS/PaperRead-Beta/issues/new?template=bug_report.yml) · [隐私说明](PRIVACY.md)
 
-## 可以做什么
+> 本机研发版本为 CISRead 0.9.1-beta.1，已包含论文语境卡与术语修正；这些功能尚未包含在当前公开的 0.8.0 安装包中。新名称安装说明见 [CISRead 指南](CISREAD_BETA_GUIDE.md)，新包以未来 Release 为准。
+
+## 当前公开安装包可以做什么
 
 - 打开 PDF 后连续上下滚动；一个窗口最多同时保留 8 篇论文标签。
 - 鼠标划选英文句子，在右侧查看中文译文，继续在原文中阅读。
@@ -33,10 +39,10 @@
 - 套餐余额无法在软件中实时读取，面板中的缓存统计不是余额。
 - 模型解释可能出错，尤其是公式、数值和图表结论，请与论文原文核对。
 
-本阶段用于个人学习、研究和非商业体验。所包含的 Sign in with ChatGPT DevKit 及修改受[独立非商业许可](licenses/SIWC-LICENSE.txt)约束，商业用途不在本次发布范围内。PaperRead 是独立项目，并非 OpenAI 或 Anthropic 的官方产品。
+本阶段用于个人学习、研究和非商业体验。所包含的 Sign in with ChatGPT DevKit 及修改受[独立非商业许可](licenses/SIWC-LICENSE.txt)约束，商业用途不在本次发布范围内。CISRead 是 CISArch 的独立项目，并非 OpenAI 或 Anthropic 的官方产品。
 
 此仓库用于内测包分发、使用说明和反馈；不包含原私有开发仓库的历史、作者的账号凭据或论文资料。
 
-![PaperRead Beta 首次使用界面：内置演示与未连接状态](preview.png)
+![公开版 PaperRead Beta 0.8.0 首次使用界面：内置演示与未连接状态](preview.png)
 
 套餐接入范围参考 [OpenAI 官方本地工具说明](https://developers.openai.com/cookbook/articles/sign-in-with-chatgpt)。

@@ -1,5 +1,5 @@
 name: 内测问题反馈
-description: 报告 PaperRead Beta 的问题
+description: 报告 CISRead / 旧版 PaperRead Beta 的问题
 body:
   - type: markdown
     attributes:
@@ -7,7 +7,7 @@ body:
   - type: input
     id: version
     attributes:
-      label: PaperRead 版本
+      label: CISRead / PaperRead 版本
       placeholder: 0.8.0-beta.1
     validations:
       required: true

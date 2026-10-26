@@ -1,5 +1,7 @@
 # PaperRead Beta 安装与试用
 
+> 软件现名 **CISRead**。本页保留当前公开的旧版 0.8.0 安装说明；新版名称与数据兼容说明见 [CISRead 指南](CISREAD_BETA_GUIDE.md)，英文介绍见 [English README](README.en.md)。
+
 版本：0.8.0-beta.1。适用 macOS 13 或更高版本，Apple Silicon / M 系列 Mac。
 
 ## 安装
