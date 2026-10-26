@@ -1,0 +1,38 @@
+name: 内测问题反馈
+description: 报告 PaperRead Beta 的问题
+body:
+  - type: markdown
+    attributes:
+      value: "感谢参与内测。此反馈公开显示，请勿上传密码、登录文件、私人论文或敏感截图。"
+  - type: input
+    id: version
+    attributes:
+      label: PaperRead 版本
+      placeholder: 0.8.0-beta.1
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: macOS 版本与芯片
+      placeholder: macOS 15，Apple M 系列
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 按什么顺序操作后出现问题？
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期与实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 补充信息或脱敏截图
+      description: 无须发送整篇 PDF、账号配置或私人论文。
