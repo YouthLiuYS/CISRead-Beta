@@ -4,62 +4,61 @@
 
 <img src="icon.png" alt="CISRead icon" width="88" />
 
-**CISRead**, formerly **PaperRead**, is a macOS reader for English research papers from the **CISArch** team. The **CIS** prefix identifies the team's products, including **CISCube**, another product under development.
+**CISRead** is a macOS reader for English research papers. Read the original continuously, select a passage for a Chinese translation, and interpret figures with supporting text.
 
-The repository URL remains `PaperRead-Beta` so existing download and feedback links continue to work.
+**Initial Beta release: CISRead Beta 1 · `1.0.0-beta.1`**
 
-## Download status
+For **macOS 13+ on Apple Silicon**.
 
-**Current public installer: PaperRead Beta `0.8.0-beta.1`**, for **macOS 13+ on Apple Silicon**.
+[Download Beta 1](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.1) · [Installation guide](BETA_GUIDE.md) · [Report an issue](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml) · [Privacy](PRIVACY.md)
 
-[Download ZIP or DMG](https://github.com/YouthLiuYS/PaperRead-Beta/releases/tag/v0.8.0-beta.1) · [Report an issue](https://github.com/YouthLiuYS/PaperRead-Beta/issues/new?template=bug_report.yml) · [Privacy for the public 0.8 build](PRIVACY.md)
+## Features
 
-The current development build is named **CISRead `0.9.1-beta.1`**. It adds paper-context cards and per-paper terminology corrections. These newer features and the new application name are **not included in the current public 0.8 installer**. A new CISRead installer will be identified by its own future Release; existing files are not replaced silently.
+- **Paper-aware translation:** the first translation builds a reusable context card from extracted paper text in segments. Later translations use the paper's topic, terminology, definitions, and relevant original passages to preserve the selected passage's meaning.
+- **Context and terminology:** inspect the context card and source-page references, and correct Chinese terminology for that paper.
+- **Per-paper caching:** exact repeated requests reuse completed local answers when the paper, selection, context, model, and reasoning effort match. Different papers do not share translations.
+- **Figure interpretation:** capture a figure, attach its caption and related text, and ask for a Chinese explanation.
+- **Continuous reading:** scroll through all pages and keep up to eight papers in tabs in one window.
+- **Local continuity:** restore saved PDFs, reading positions, figure drafts, and completed answer history.
+- **Model controls:** choose an available model and its supported reasoning effort.
+- **Desktop styling:** follow the system's light or dark appearance with a white-and-graphite application icon.
 
-## What the public Beta can do
+The interface currently uses Chinese labels and translates into Chinese. This English README does not imply an English interface.
 
-- Read a PDF by scrolling continuously through its pages.
-- Select English text and view a Chinese translation beside the original.
-- Capture a figure, attach its caption and related text, and ask for a Chinese explanation.
-- Choose an available model and its supported reasoning effort.
-- Reuse cached answers to avoid exact duplicate requests.
-- Keep up to eight papers in tabs in one window, with local positions, drafts, and answer history.
+## Install and try it
 
-The app currently uses Chinese interface labels and translates into Chinese. English documentation does not imply an English interface or English output.
+1. Download either ZIP or DMG from the Beta 1 Release; you only need one format.
+2. Extract the ZIP or open the DMG, then copy **`CISRead.app`** to **Applications**. Quit an existing instance before replacing it.
+3. Launch CISRead and select **Continue with ChatGPT**. Sign in to your own eligible account in the system browser and authorize plan usage. OpenAI determines eligibility, model access, limits, and service availability.
+4. Open an English PDF with a text layer and select a complete sentence. The first context preparation may take longer and consume more plan usage; the resulting context and completed translations are reused locally.
+5. For a figure, use figure mode, capture the relevant area, add supporting text, and explicitly start interpretation.
 
-## Install the current public download
+No separate API key, local language model, Node installation, or independently running server is needed for the packaged app. Reading remains available when the plan is disconnected. Each tester uses their own plan; no developer account, credentials, or shared quota are distributed. There is no automatic updater.
 
-1. Download either the ZIP or the DMG; you only need one format.
-2. Extract the ZIP or open the DMG, then copy **`PaperRead.app`** to **Applications**. The public 0.8 download still uses this original name. Quit an existing instance before replacing it.
-3. Launch the app and choose **Continue with ChatGPT**. Sign in to your own eligible account in the system browser and authorize plan usage. Model access and limits depend on OpenAI and your account.
-4. Open an English PDF with a text layer and select a sentence. For a figure, select the figure mode, capture the relevant area, add supporting text, and explicitly start interpretation.
+The Beta uses an **ad-hoc integrity signature**, not Apple Developer ID signing or notarization. If you trust the source, follow [Apple's app-specific opening instructions](https://support.apple.com/102445) and verify the Release's `SHA256SUMS`. Do not disable system protection. Managed devices may not allow an exception.
 
-The packaged app needs no separate API key, local language model, Node installation, or independently running server. Reading a PDF remains available when the plan is disconnected. There is no automatic updater.
+## Paper context, usage, and privacy
 
-## Signature and checksums
+PDF rendering and text extraction happen locally. The first context request sends extracted paper text to OpenAI in segments; later translations send the selected passage with necessary context. Figure interpretation sends the image and text you explicitly include. Context preparation and higher reasoning effort consume plan usage.
 
-The public Beta has an ad-hoc integrity signature. It is **not Developer ID signed or Apple notarized**, and macOS may block its first launch. Verify that the file came from this repository's Release and compare its SHA-256 with `SHA256SUMS` if needed.
+Viewing history, opening a context card, and correcting terminology do not themselves run inference. Completed local cache hits are identified in the interface. Local request and cache statistics are not a live subscription balance; use the app's link to the official usage page.
 
-If you trust the source, follow [Apple's instructions for opening an unnotarized app](https://support.apple.com/102445), including the app-specific decision in Privacy & Security. Do not disable Gatekeeper or system protection. Stop if macOS reports malicious content. Managed devices may not permit an exception.
+The app manages its own authorization, without reading Codex login files. Credentials remain encrypted in the user's local application data. There is no automatic telemetry, crash upload, or feedback submission. See [privacy details](PRIVACY.md) and the [official local-tool documentation](https://developers.openai.com/cookbook/articles/sign-in-with-chatgpt).
 
-## Plan usage and privacy
+## Limits and feedback
 
-Every tester authorizes their own eligible ChatGPT plan. The Beta does not distribute a developer account, credentials, or shared quota. It manages its own authorization rather than reading your Codex login files. Eligibility, models, and available usage are determined by OpenAI; see the [official local-tool documentation](https://developers.openai.com/cookbook/articles/sign-in-with-chatgpt).
+Only Apple Silicon macOS has been validated. No Windows, Linux, or Intel Mac installer is provided. There is no OCR text layer for scanned pages, although selected images can be discussed. Full-paper indexing is limited to 2,000 pages, 600,000 text characters, and 6,000 passages; missing text coverage is disclosed rather than treated as understood content.
 
-For **the public 0.8 build**, PDFs are parsed locally and the selected text or explicitly supplied figure evidence is sent for inference. **The newer CISRead development build** additionally sends extracted paper text when first building a paper-context card, then sends selections with the required context. The [CISRead privacy document](CISREAD_PRIVACY.md) describes that newer behavior.
+Model output can be wrong, particularly for equations, measurements, terminology, and chart conclusions. Check the original evidence. In [GitHub Issues](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml), include the app version, macOS version and chip, steps, expected behavior, and actual behavior. Do not publish private papers, credentials, or sensitive screenshots.
 
-Local request and cache statistics are not a real-time subscription balance. The app links to the official usage page. Higher reasoning effort may take longer and consume more plan usage.
+This is a free, personal, noncommercial Beta. The bundled Sign in with ChatGPT runtime has its own [noncommercial license](licenses/SIWC-LICENSE.txt). CISRead is an independent project, not an official OpenAI or Anthropic product.
 
-The application has no automatic telemetry, crash upload, or feedback submission. Reading data, caches, and authorization have separate local controls. Public issue reports should not contain private papers, login files, passwords, or sensitive screenshots.
+## Release baseline
 
-## Limitations and feedback
+**Beta 1 starts the CISRead Beta program.** Future Betas build on this baseline. The public repository provides CISRead installers and documentation.
 
-Only the Apple Silicon macOS build has been validated. Windows, Linux, and Intel Mac builds are not provided here. There is no OCR text layer for scanned PDFs; selected images can be discussed through figure interpretation. Model output can be wrong, especially for equations, measurements, and chart conclusions, so check the original evidence.
+This repository contains distribution materials and feedback templates, without private source history, developer credentials, or personal papers.
 
-Use [GitHub Issues](https://github.com/YouthLiuYS/PaperRead-Beta/issues/new?template=bug_report.yml) and include the app version, macOS version and chip, reproduction steps, expected behavior, and actual behavior. Share only material you are allowed to publish.
+![CISRead Beta 1 welcome screen with original demo content and no account connected](preview.png)
 
-This is a free, personal, noncommercial Beta. The included Sign in with ChatGPT runtime is governed by its own [noncommercial license](licenses/SIWC-LICENSE.txt). CISRead is an independent CISArch project, not an official OpenAI or Anthropic product. This distribution repository contains installers, documentation, and feedback templates; it does not publish the private source repository or its history.
-
-![Public PaperRead Beta 0.8 interface, showing the original demo and disconnected state](preview.png)
-
-[New CISRead installation and compatibility guide](CISREAD_BETA_GUIDE.md) · [中文说明](README.md)
+[Release notes](RELEASE_NOTES.md) · [中文说明](README.md)
