@@ -1,8 +1,6 @@
-# CISRead
+<h1 align="left"><img src="icon.png" width="48" height="48" align="absmiddle" alt="" /> CISRead</h1>
 
 简体中文 · [English](README.en.md)
-
-<img src="icon.png" alt="CISRead 图标" width="88" />
 
 **CISRead** 是用于英文论文精读的 macOS 桌面软件：连续阅读原文、划选查看中文翻译，并结合论文语境和图文证据理解内容。
 

@@ -1,8 +1,6 @@
-# CISRead
+<h1 align="left"><img src="icon.png" width="48" height="48" align="absmiddle" alt="" /> CISRead</h1>
 
 [简体中文](README.md) · English
-
-<img src="icon.png" alt="CISRead icon" width="88" />
 
 **CISRead** is a macOS reader for English research papers. Read the original continuously, select a passage for a Chinese translation, and interpret figures with supporting text.
 
