@@ -4,11 +4,21 @@
 
 **CISRead** is a macOS reader for English research papers. Read the original continuously, select a passage for a Chinese translation, and interpret figures with supporting text.
 
-**Current release: CISRead Beta 4 · `1.0.0-beta.4`**
+**Current release: CISRead Beta 5 · `1.0.0-beta.5`**
 
 For **macOS 13+ on Apple Silicon**.
 
-[Download Beta 4](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.4) · [Installation guide](BETA_GUIDE.md) · [Report an issue](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml) · [Privacy](PRIVACY.md)
+[Download Beta 5](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.5) · [Installation guide](BETA_GUIDE.md) · [Report an issue](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml) · [Privacy](PRIVACY.md)
+
+## Beta 5: easier selection and paper chats
+
+Drag with whole-word endpoints or double-click a sentence in its column. Direct cross-column/page drags are flagged before automatic translation. **多段选文** collects separate fragments across columns and pages; reorder or remove them, then choose **翻译选段**. Only selected fragments are translated, with up to 12 excerpts / 6,000 characters. The batch, page references and highlights persist locally per paper/tab.
+
+Open **论文聊天 → ＋ 新建聊天** for conversations grounded in the current paper. **提问 / 带入聊天** attaches selected excerpts. Answers reuse the paper context, retrieve original evidence, format equations and offer source-page links. Multiple conversations, drafts, stop and retry are supported with your existing plan, model and reasoning effort. Enter sends; Shift+Enter adds a line; IME confirmation does not send.
+
+Each request carries up to six recent complete rounds within 24,000 characters, including their excerpts. A conversation holds 40 rounds; global storage allows 60 conversations / 12 MiB, reports full storage and detects concurrent edits. Preparing excerpts and viewing records use no inference. Sending, retrying and first-time context preparation use your plan. Check claims against the paper; use figure interpretation for images. Beta 4 can update directly inside CISRead.
+
+![Excerpt collection and paper chat, using an original demo PDF and simulated responses for interface illustration](reading-chat-preview.png)
 
 ## Features
 
@@ -37,7 +47,7 @@ Math-formatting example using local demonstration text:
 4. Open an English PDF with a text layer and select a complete sentence. The first context preparation may take longer and consume more plan usage; the resulting context and completed translations are reused locally.
 5. For a figure, use figure mode, capture the relevant area, add supporting text, and explicitly start interpretation.
 
-No separate API key, local language model, Node installation, or independently running server is needed for the packaged app. Reading remains available when the plan is disconnected. Each tester uses their own plan; no developer account, credentials, or shared quota are distributed. Starting with Beta 4, download and restart to install updates inside CISRead; authorization and local reading data are retained. Beta 1–3 users need to install Beta 4 once using ZIP or DMG.
+No separate API key, local language model, Node installation, or independently running server is needed for the packaged app. Reading remains available when the plan is disconnected. Each tester uses their own plan; no developer account, credentials, or shared quota are distributed. Starting with Beta 4, download and restart to install updates inside CISRead; authorization and local reading data are retained. Beta 1–3 users need to install the current Beta 5 once using ZIP or DMG.
 
 During download you can continue reading, dismiss the dialog, or cancel. Installation starts only after signatures are verified and all tabs have been saved. A failed save stops restart, and an invalid signature blocks installation. macOS may request installation authorization when needed.
 

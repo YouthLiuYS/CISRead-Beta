@@ -1,41 +1,39 @@
-# CISRead Beta 4 · 1.0.0-beta.4
+# CISRead Beta 5 · 1.0.0-beta.5
 
-加入应用内下载、签名校验与重启安装，不用手动替换应用。适用 macOS 13+ / Apple Silicon（M 系列 Mac）。Beta 1 保持为 CISRead 内测初始版本。
+更轻松地选中论文正文，拼接被栏或页分开的段落，并在阅读时与当前论文对话。适用 macOS 13+ / Apple Silicon（M 系列 Mac）。Beta 1 继续作为内测初始版本。
 
 ## 本次更新
 
-- **应用内下载**：通过右上角 **⋯ → 检查更新…** 或 macOS **CISRead / 帮助** 菜单查看新版本和发布说明，点击 **下载更新**，直接查看下载进度。
-- **继续阅读**：下载期间可关闭弹窗、继续阅读或取消下载；安装包准备好后可稍后再安装。
-- **重启并安装**：签名校验通过后点击 **重启并安装**，自动完成安装并重新打开 CISRead。
-- **保留资料**：重启前保存全部论文标签、阅读位置、缩放、答案历史与图文草稿，沿用原来的登录、语境、术语、缓存及模型/思考深度设置。
-- **失败保护**：资料保存失败会暂停重启；更新清单或安装包签名校验失败会阻止安装，保留当前应用与本机资料。网络失败可重新下载。
-- **按需更新**：主动检查和下载，不调用翻译模型，不发送论文或套餐凭据，没有独立常驻更新服务。
+- **选文更轻松**：拖选自动补齐首尾单词，双击正文选择所在栏内的句子；悬浮工具栏提供翻译、复制和提问，不挤动论文阅读位置。跨栏或跨页直接拖选会先提醒确认，避免自动发送夹杂图表的选区。
+- **多段选文**：开启“多段选文”，分别划选左右栏或不同页的正文，调整顺序、移除或清空，点击“翻译选段”后只发送这些内容。中间未选中的图表与文字不会混入；支持 12 段 / 6000 字符，选段草稿、高亮和页码可重启恢复。
+- **论文聊天**：右侧“论文聊天 → ＋ 新建聊天”，基于本篇论文询问方法、公式、实验与局限。通过“提问 / 带入聊天”附上选段；每轮复用语境卡并检索相关原文，中文回答保留公式排版，“本轮原文依据”可回到来源页。
+- **会话与草稿**：同一论文可保存多个聊天，支持停止、重试、复制和草稿恢复。Enter 发送，Shift+Enter 换行，中文输入法确认不触发发送。每轮带入最近 6 轮内、总计最多 24000 字符的完整消息及其选段，不带入中断答案；单会话最多 40 轮，全局 60 会话 / 12 MiB，空间满时明确提示，并检测并行编辑冲突。
+- **沿用套餐和缓存**：聊天继续使用现有 ChatGPT 套餐、模型与思考深度，与翻译共用用量统计和精确缓存。多段缓存比较实际内容、来源、顺序、语境和设置，不因重新划选产生的临时 ID 而重复调用。查看历史、准备选段和新建空聊天不使用模型。
+- **启动更新提示与图标**：包含 Beta 4 后续本机修订：启动时后台检查一次更新，发现新版由你选择“立即更新”或“稍后”；同步修复中央菱形留白、均匀线宽和交叉处间距，保留白底石墨灰材质与光效。
 
-继续保留论文语境翻译、图文解读、多标签连续阅读和公式排版。已有缓存和答案历史无需重新调用模型。
+## 升级与资料保留
 
-## 安装与升级
+**Beta 4 用户**：打开 **⋯ → 检查更新…**，点击“下载更新”，校验通过后选择“重启并安装”。下载期间可继续阅读，安装前保存所有论文标签与记录。登录、论文、阅读位置、历史、语境、术语、缓存、模型和思考深度保留。
 
-**首次安装，或从 Beta 1–3 升级到 Beta 4**：下载名称以 `CISRead-Beta-` 开头的 ZIP / DMG，任选一种；正常退出旧版，将 `CISRead.app` 放入“应用程序”并替换，再启动。此后新版可以直接在 CISRead 内下载和重启安装。
+**首次安装或 Beta 1–3 用户**：下载名称以 `CISRead-Beta-` 开头的 ZIP / DMG，任选一种；正常退出旧版，再把 `CISRead.app` 放入“应用程序”并替换。`CISRead-Update-…zip` 和 `appcast.xml` 供应用内更新使用。
 
-`CISRead-Update-…zip` 与 `appcast.xml` 供应用内更新组件使用，首次安装请选择普通 Beta 安装包。校验和见 `SHA256SUMS`，版本与构建信息见 `release-manifest.json`。
+校验和见 `SHA256SUMS`，构建身份见 `release-manifest.json`。源码仓库保持私有；安装包不包含作者的账号、私人论文、历史或缓存。旧版本发布资产保持原样。
 
-[安装与使用](https://github.com/YouthLiuYS/CISRead-Beta/blob/main/BETA_GUIDE.md) · [English README](https://github.com/YouthLiuYS/CISRead-Beta/blob/main/README.en.md) · [提交反馈](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml)
+## 当前限制
 
-## 内测说明
+- 扫描 PDF 尚无 OCR 文字层，图片问题继续用图文解读。聊天原文检索受已提取文字和语境覆盖限制，模型回答需核对证据。
+- 首次建立语境会分段发送提取的全文，并消耗本人的套餐；后续按问题发送必要证据与有限历史。没有额外 API key 或独立常驻服务。
+- 界面和回答目前为中文；不支持读取实时订阅余额。模型及推理档位由本人账号决定。
+- 应用采用 ad-hoc 完整性签名，没有 Apple Developer ID 签名及公证；更新由固定 Ed25519 公钥验证。用途为个人非商业学习与试用。
 
-- 应用使用 ad-hoc 完整性签名，没有 Apple Developer ID 签名及公证。首次打开方式见安装指南；系统可能要求本人授权安装更新。
-- 更新组件 Sparkle 校验独立的 Ed25519 更新签名。更新仅替换应用程序包，用户资料目录保持原位。
-- 每名测试者授权本人符合资格的 ChatGPT 套餐。无需额外 API key、本地大模型或独立常驻服务。不登录仍可阅读和更新。
-- 数据行为见[隐私说明](https://github.com/YouthLiuYS/CISRead-Beta/blob/main/PRIVACY.md)。更新不消耗翻译套餐用量。
-- 暂无 OCR 文字层和订阅余额读取。模型及公式内容需与原文核对。
-- 仅用于个人非商业学习与试用；包含的运行库遵循其独立许可。安装包不含作者登录、私人论文、阅读记录或缓存。
+[安装与使用](https://github.com/YouthLiuYS/CISRead-Beta/blob/main/BETA_GUIDE.md) · [English README](https://github.com/YouthLiuYS/CISRead-Beta/blob/main/README.en.md) · [隐私说明](https://github.com/YouthLiuYS/CISRead-Beta/blob/main/PRIVACY.md) · [提交反馈](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml)
 
 ## English
 
-CISRead Beta 4 adds **in-app download, signature verification, and restart-to-install updates**. Check for a new release from the app menu or macOS application/Help menus, download with progress, and choose **重启并安装** once the verified update is ready. You can continue reading, dismiss the dialog, or cancel during download.
+CISRead Beta 5 improves PDF selection with whole-word endpoints and sentence double-clicks. **多段选文** collects up to 12 excerpts / 6,000 characters across columns or pages, lets you reorder them, and translates only the chosen fragments. Cross-layout drags are flagged before automatic translation. A floating toolbar preserves the reading anchor, and excerpt drafts/highlights survive restart.
 
-Before restart, CISRead saves all paper tabs, reading positions, zoom levels, history, and figure drafts. Existing authorization, paper context, terminology, translation cache, and model/reasoning preferences remain in place. A failed save stops restart; invalid feed or archive signatures block installation. Sparkle verifies updates using a pinned Ed25519 key. Updates replace only the application bundle.
+**论文聊天 → ＋ 新建聊天** creates conversations grounded in the current paper. Attach excerpts with **提问 / 带入聊天**, ask follow-ups, inspect original evidence and jump to its PDF page. Answers retain mathematical formatting. Multiple chats, drafts, stop/retry and IME-safe Enter-to-send are included. Requests carry up to six recent complete rounds within 24,000 characters, including attached excerpts; incomplete answers are excluded. Each chat holds 40 rounds, with a global 60-chat / 12 MiB store and concurrent-edit protection.
 
-Checks and downloads are manual public requests without paper contents or plan credentials; they do not use translation inference. No independently running update service is required. macOS may request installation authorization when needed.
+The existing ChatGPT plan, model/reasoning controls and shared cache/statistics remain in use. Preparing excerpts and viewing records require no inference. This release also includes startup update reminders and the refined graphite icon from later local Beta 4 revisions.
 
-**Beta 1–3 users must install Beta 4 once using a regular `CISRead-Beta-` ZIP or DMG.** Later releases can be installed inside CISRead. The `CISRead-Update-` ZIP and `appcast.xml` are updater artifacts. For macOS 13+ on Apple Silicon; personal noncommercial prerelease, ad-hoc signed without Apple Developer ID signing or notarization. The interface and translation output are currently Chinese.
+Beta 4 can download, verify and restart to install Beta 5 inside the app; Beta 1–3 require one regular ZIP/DMG installation. Authorization, PDFs, reading records, context, terminology, cache and preferences remain in place. For macOS 13+ on Apple Silicon; ad-hoc signed, without Developer ID notarization. Chinese interface/output, personal noncommercial Beta. Inspect model claims against the original paper.
