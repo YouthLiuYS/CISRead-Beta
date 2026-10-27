@@ -1,23 +1,27 @@
-# CISRead Beta 3 安装与试用
+# CISRead Beta 4 安装与试用
 
 [English README](README.en.md) · [中文介绍](README.md)
 
-当前版本 **1.0.0-beta.3**；Beta 1 为内测初始版本。适用 macOS 13+ / Apple Silicon（M 系列 Mac）。
+当前版本 **1.0.0-beta.4**；Beta 1 为内测初始版本。适用 macOS 13+ / Apple Silicon（M 系列 Mac）。
 
 ## 下载与安装
 
-1. 从 [Beta 3 Release](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.3) 下载 ZIP 或 DMG，只需一种。可用同页 `SHA256SUMS` 核对下载文件。
+1. 从 [Beta 4 Release](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.4) 下载 ZIP 或 DMG，只需一种。可用同页 `SHA256SUMS` 核对下载文件。
 2. ZIP：解压后将 `CISRead.app` 放入“应用程序”。DMG：打开后将 `CISRead.app` 拖到其中的 Applications 快捷方式，复制完成后推出映像。
 3. 更新前正常退出应用，再替换；不要同时运行两份应用。
 4. 从 `/Applications/CISRead.app` 启动。无需终端、Node、本地大模型或另外启动服务。
 
 本 Beta 使用 ad-hoc 完整性签名，**没有 Apple Developer ID 签名及公证**，首次打开可能被 macOS 拦截。确认来源及校验和后，可参考 [Apple 官方说明](https://support.apple.com/zh-cn/102445)，自行决定是否通过“隐私与安全性”允许打开这一应用。不要关闭 Gatekeeper 或系统安全保护；若系统报告恶意内容，请停止安装。受管理的设备可能不允许例外。
 
-## 在应用内检查更新
+## 在应用内下载并安装更新
 
-点击右上角 **⋯ → 检查更新…**，或 macOS 顶部 **CISRead / 帮助 → 检查更新…**。弹窗会比较当前版本与公开版本，并显示更新内容；有适用于当前设备的新安装包时点击 **下载更新**，在浏览器完成下载。
+点击右上角 **⋯ → 检查更新…**，或 macOS 顶部 **CISRead / 帮助 → 检查更新…**。发现新版本后点击 **下载更新**，应用内显示进度；下载和签名校验完成后点击 **重启并安装**，升级后自动重新打开。
 
-下载后正常退出 CISRead，将新应用拖入“应用程序”并替换，再启动。登录和本机阅读资料保留。检查更新不调用翻译模型；网络问题会明确提示，不会误报为最新版本。若本机版本领先于公开版本，会说明当前版本较新。按 Esc 或点击弹窗外部关闭。
+下载时可继续阅读、关闭弹窗或取消；更新准备好后也可稍后安装。重启前保存全部论文标签、阅读位置、答案历史和图文草稿；保留登录、论文语境、术语、缓存、模型和思考深度设置。保存失败会暂停重启，校验失败会阻止安装，当前应用和资料保留。系统可能要求本人授权安装。
+
+Beta 1–3 请先通过 ZIP / DMG 手动安装一次 Beta 4，之后可在应用内完成更新。专用 `CISRead-Update-…zip` 和 `appcast.xml` 供更新组件使用，首次安装请选择名称以 `CISRead-Beta-` 开头的 ZIP / DMG。
+
+检查和下载不调用翻译模型，不发送论文或套餐凭据；没有启动时轮询。网络问题会明确提示，可重新下载。若本机版本领先于公开版本，会说明当前版本较新。按 Esc 或点击弹窗外部关闭；保存和安装期间请等待完成。
 
 ## 登录与阅读
 
@@ -33,7 +37,7 @@
 
 译文、图文解释与历史答案自动排版公式、粗体和列表。兼容 `\(...\)`、`\[...\]`、`$...$` 和 `$$...$$`；长公式可在公式区域横向滚动。已有答案直接在本机重新显示，无需点击“重新翻译 / 重新解读”，不消耗额外套餐用量。复制仍保留原始 Markdown / LaTeX。
 
-更新时替换应用即可，现有登录、论文、语境、缓存、历史、模型和思考深度设置继续保留。
+公式排版和旧答案会继续保留，无需重新调用模型。
 
 ## 图文解读
 
@@ -52,8 +56,8 @@ CISRead 使用 `~/Library/Application Support/CISRead/` 保存账号与阅读资
 - 仅验证 Apple Silicon macOS；Windows、Linux、Intel Mac 尚未验证。
 - 无 OCR 文字层，扫描页可框选为图片讨论；缺少文字的页面会说明覆盖范围。
 - 全文语境上限为 2000 页、60 万字符、6000 片段，超限明确提示。
-- 模型可能产生错误，请核对论文证据。应用内提供检查与下载入口，安装时退出并替换应用。
+- 模型可能产生错误，请核对论文证据。更新组件校验独立更新签名，应用本身仍使用 ad-hoc 签名，没有 Developer ID 公证。
 
 通过应用“帮助 → 反馈问题”或 [Issues](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml) 提供版本、系统与复现步骤。反馈公开显示，请勿上传私人论文、密码、登录文件或敏感截图。
 
-[隐私说明](PRIVACY.md) · [Beta 3 发布说明](RELEASE_NOTES.md)
+[隐私说明](PRIVACY.md) · [Beta 4 发布说明](RELEASE_NOTES.md)
