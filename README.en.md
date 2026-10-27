@@ -4,17 +4,18 @@
 
 **CISRead** is a macOS reader for English research papers. Read the original continuously, select a passage for a Chinese translation, and interpret figures with supporting text.
 
-**Initial Beta release: CISRead Beta 1 · `1.0.0-beta.1`**
+**Current release: CISRead Beta 2 · `1.0.0-beta.2`**
 
 For **macOS 13+ on Apple Silicon**.
 
-[Download Beta 1](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.1) · [Installation guide](BETA_GUIDE.md) · [Report an issue](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml) · [Privacy](PRIVACY.md)
+[Download Beta 2](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.2) · [Installation guide](BETA_GUIDE.md) · [Report an issue](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml) · [Privacy](PRIVACY.md)
 
 ## Features
 
 - **Paper-aware translation:** the first translation builds a reusable context card from extracted paper text in segments. Later translations use the paper's topic, terminology, definitions, and relevant original passages to preserve the selected passage's meaning.
 - **Context and terminology:** inspect the context card and source-page references, and correct Chinese terminology for that paper.
 - **Per-paper caching:** exact repeated requests reuse completed local answers when the paper, selection, context, model, and reasoning effort match. Different papers do not share translations.
+- **Formatted mathematics:** inline and display equations, fractions, roots, subscripts, sums, and matrices render in answers. Existing cached and historical answers receive the same formatting locally, without another inference.
 - **Figure interpretation:** capture a figure, attach its caption and related text, and ask for a Chinese explanation.
 - **Continuous reading:** scroll through all pages and keep up to eight papers in tabs in one window.
 - **Local continuity:** restore saved PDFs, reading positions, figure drafts, and completed answer history.
@@ -23,9 +24,13 @@ For **macOS 13+ on Apple Silicon**.
 
 The interface currently uses Chinese labels and translates into Chinese. This English README does not imply an English interface.
 
+Math-formatting example using local demonstration text:
+
+![CISRead math formatting: inline variables, a matrix, and a fractional sum](math-preview.png)
+
 ## Install and try it
 
-1. Download either ZIP or DMG from the Beta 1 Release; you only need one format.
+1. Download either ZIP or DMG from the current Release; you only need one format.
 2. Extract the ZIP or open the DMG, then copy **`CISRead.app`** to **Applications**. Quit an existing instance before replacing it.
 3. Launch CISRead and select **Continue with ChatGPT**. Sign in to your own eligible account in the system browser and authorize plan usage. OpenAI determines eligibility, model access, limits, and service availability.
 4. Open an English PDF with a text layer and select a complete sentence. The first context preparation may take longer and consume more plan usage; the resulting context and completed translations are reused locally.

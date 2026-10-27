@@ -4,17 +4,18 @@
 
 **CISRead** 是用于英文论文精读的 macOS 桌面软件：连续阅读原文、划选查看中文翻译，并结合论文语境和图文证据理解内容。
 
-**内测初始版本：CISRead Beta 1 · 1.0.0-beta.1**
+**当前版本：CISRead Beta 2 · 1.0.0-beta.2**
 
 适用 **macOS 13+ / Apple Silicon（M 系列 Mac）**。
 
-[下载 Beta 1](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.1) · [安装与使用](BETA_GUIDE.md) · [反馈问题](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml) · [隐私说明](PRIVACY.md)
+[下载 Beta 2](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.2) · [安装与使用](BETA_GUIDE.md) · [反馈问题](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml) · [隐私说明](PRIVACY.md)
 
 ## 可以试用什么
 
 - **论文语境翻译**：首次翻译时分段整理提取的全文，生成可复用语境卡；翻译结合主题、专业术语、定义及相关正文，保留选句在论文中的含义。
 - **语境卡与术语修正**：查看概括、原文依据与页码；为本篇论文修正中文术语译法，后续翻译优先采用。
 - **按论文区分的缓存**：同一论文、选区、语境、模型及思考深度的重复请求复用本机答案，显示“本机缓存 · 未调用云端”；不同论文不会混用答案。
+- **公式排版**：译文和图文解释中的分式、根号、上下标、求和与矩阵直接以公式显示；已有缓存和历史无需重新调用模型即可获得同样排版。
 - **图文解读**：框选论文图，添加图注、相关正文和问题，获得中文解释。
 - **连续阅读与多标签**：所有页面上下滚动；同一窗口最多同时保留 8 篇论文。
 - **阅读恢复与历史**：本机保存论文副本、阅读位置、图文草稿及已完成答案，重启后恢复。
@@ -22,6 +23,10 @@
 - **简洁桌面界面**：跟随系统深浅色，保留白底石墨灰材质图标。
 
 当前界面和翻译输出为中文；英文 README 提供使用说明，不代表应用已有英文界面。
+
+公式排版示例（本地演示文本）：
+
+![CISRead 公式排版示例：行内变量、矩阵和分式求和](math-preview.png)
 
 ## 参加内测
 

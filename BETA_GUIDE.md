@@ -1,12 +1,12 @@
-# CISRead Beta 1 安装与试用
+# CISRead Beta 2 安装与试用
 
 [English README](README.en.md) · [中文介绍](README.md)
 
-版本 **1.0.0-beta.1**，CISRead 的内测初始版本。适用 macOS 13+ / Apple Silicon（M 系列 Mac）。
+当前版本 **1.0.0-beta.2**；Beta 1 为内测初始版本。适用 macOS 13+ / Apple Silicon（M 系列 Mac）。
 
 ## 下载与安装
 
-1. 从 [Beta 1 Release](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.1) 下载 ZIP 或 DMG，只需一种。可用同页 `SHA256SUMS` 核对下载文件。
+1. 从 [Beta 2 Release](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.2) 下载 ZIP 或 DMG，只需一种。可用同页 `SHA256SUMS` 核对下载文件。
 2. ZIP：解压后将 `CISRead.app` 放入“应用程序”。DMG：打开后将 `CISRead.app` 拖到其中的 Applications 快捷方式，复制完成后推出映像。
 3. 更新前正常退出应用，再替换；不要同时运行两份应用。
 4. 从 `/Applications/CISRead.app` 启动。无需终端、Node、本地大模型或另外启动服务。
@@ -22,6 +22,12 @@
 右侧 **论文语境** 可查看概括、术语与原文出处。填写英文术语和本篇中文译法后点击 **保存译法**，后续请求优先采用，只作用于本篇；旧答案保留原来的语境快照。“本次语境依据”可回查来源页。
 
 所有页面在同一滚动区。＋ / ⌘T 新建论文标签，⌘W 关闭当前标签；最多 8 个标签。关闭应用会保存论文、阅读位置、图文草稿和答案历史。重复请求显示本机缓存命中，“重新翻译 / 重新解读”会明确重新调用模型。
+
+## 公式显示
+
+译文、图文解释与历史答案自动排版公式、粗体和列表。兼容 `\(...\)`、`\[...\]`、`$...$` 和 `$$...$$`；长公式可在公式区域横向滚动。已有答案直接在本机重新显示，无需点击“重新翻译 / 重新解读”，不消耗额外套餐用量。复制仍保留原始 Markdown / LaTeX。
+
+更新时替换应用即可，现有登录、论文、语境、缓存、历史、模型和思考深度设置继续保留。
 
 ## 图文解读
 
@@ -44,4 +50,4 @@ CISRead 使用 `~/Library/Application Support/CISRead/` 保存账号与阅读资
 
 通过应用“帮助 → 反馈问题”或 [Issues](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml) 提供版本、系统与复现步骤。反馈公开显示，请勿上传私人论文、密码、登录文件或敏感截图。
 
-[隐私说明](PRIVACY.md) · [Beta 1 发布说明](RELEASE_NOTES.md)
+[隐私说明](PRIVACY.md) · [Beta 2 发布说明](RELEASE_NOTES.md)
