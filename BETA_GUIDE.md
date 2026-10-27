@@ -1,17 +1,23 @@
-# CISRead Beta 2 安装与试用
+# CISRead Beta 3 安装与试用
 
 [English README](README.en.md) · [中文介绍](README.md)
 
-当前版本 **1.0.0-beta.2**；Beta 1 为内测初始版本。适用 macOS 13+ / Apple Silicon（M 系列 Mac）。
+当前版本 **1.0.0-beta.3**；Beta 1 为内测初始版本。适用 macOS 13+ / Apple Silicon（M 系列 Mac）。
 
 ## 下载与安装
 
-1. 从 [Beta 2 Release](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.2) 下载 ZIP 或 DMG，只需一种。可用同页 `SHA256SUMS` 核对下载文件。
+1. 从 [Beta 3 Release](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.3) 下载 ZIP 或 DMG，只需一种。可用同页 `SHA256SUMS` 核对下载文件。
 2. ZIP：解压后将 `CISRead.app` 放入“应用程序”。DMG：打开后将 `CISRead.app` 拖到其中的 Applications 快捷方式，复制完成后推出映像。
 3. 更新前正常退出应用，再替换；不要同时运行两份应用。
 4. 从 `/Applications/CISRead.app` 启动。无需终端、Node、本地大模型或另外启动服务。
 
 本 Beta 使用 ad-hoc 完整性签名，**没有 Apple Developer ID 签名及公证**，首次打开可能被 macOS 拦截。确认来源及校验和后，可参考 [Apple 官方说明](https://support.apple.com/zh-cn/102445)，自行决定是否通过“隐私与安全性”允许打开这一应用。不要关闭 Gatekeeper 或系统安全保护；若系统报告恶意内容，请停止安装。受管理的设备可能不允许例外。
+
+## 在应用内检查更新
+
+点击右上角 **⋯ → 检查更新…**，或 macOS 顶部 **CISRead / 帮助 → 检查更新…**。弹窗会比较当前版本与公开版本，并显示更新内容；有适用于当前设备的新安装包时点击 **下载更新**，在浏览器完成下载。
+
+下载后正常退出 CISRead，将新应用拖入“应用程序”并替换，再启动。登录和本机阅读资料保留。检查更新不调用翻译模型；网络问题会明确提示，不会误报为最新版本。若本机版本领先于公开版本，会说明当前版本较新。按 Esc 或点击弹窗外部关闭。
 
 ## 登录与阅读
 
@@ -46,8 +52,8 @@ CISRead 使用 `~/Library/Application Support/CISRead/` 保存账号与阅读资
 - 仅验证 Apple Silicon macOS；Windows、Linux、Intel Mac 尚未验证。
 - 无 OCR 文字层，扫描页可框选为图片讨论；缺少文字的页面会说明覆盖范围。
 - 全文语境上限为 2000 页、60 万字符、6000 片段，超限明确提示。
-- 模型可能产生错误，请核对论文证据。没有自动更新，后续版本手动下载安装。
+- 模型可能产生错误，请核对论文证据。应用内提供检查与下载入口，安装时退出并替换应用。
 
 通过应用“帮助 → 反馈问题”或 [Issues](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml) 提供版本、系统与复现步骤。反馈公开显示，请勿上传私人论文、密码、登录文件或敏感截图。
 
-[隐私说明](PRIVACY.md) · [Beta 2 发布说明](RELEASE_NOTES.md)
+[隐私说明](PRIVACY.md) · [Beta 3 发布说明](RELEASE_NOTES.md)

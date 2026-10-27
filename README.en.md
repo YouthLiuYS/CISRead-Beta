@@ -4,17 +4,18 @@
 
 **CISRead** is a macOS reader for English research papers. Read the original continuously, select a passage for a Chinese translation, and interpret figures with supporting text.
 
-**Current release: CISRead Beta 2 · `1.0.0-beta.2`**
+**Current release: CISRead Beta 3 · `1.0.0-beta.3`**
 
 For **macOS 13+ on Apple Silicon**.
 
-[Download Beta 2](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.2) · [Installation guide](BETA_GUIDE.md) · [Report an issue](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml) · [Privacy](PRIVACY.md)
+[Download Beta 3](https://github.com/YouthLiuYS/CISRead-Beta/releases/tag/v1.0.0-beta.3) · [Installation guide](BETA_GUIDE.md) · [Report an issue](https://github.com/YouthLiuYS/CISRead-Beta/issues/new?template=bug_report.yml) · [Privacy](PRIVACY.md)
 
 ## Features
 
 - **Paper-aware translation:** the first translation builds a reusable context card from extracted paper text in segments. Later translations use the paper's topic, terminology, definitions, and relevant original passages to preserve the selected passage's meaning.
 - **Context and terminology:** inspect the context card and source-page references, and correct Chinese terminology for that paper.
 - **Per-paper caching:** exact repeated requests reuse completed local answers when the paper, selection, context, model, and reasoning effort match. Different papers do not share translations.
+- **Check for Updates:** use the app menu or macOS Help menu to compare published versions, read release notes, and download a compatible installer without translation inference.
 - **Formatted mathematics:** inline and display equations, fractions, roots, subscripts, sums, and matrices render in answers. Existing cached and historical answers receive the same formatting locally, without another inference.
 - **Figure interpretation:** capture a figure, attach its caption and related text, and ask for a Chinese explanation.
 - **Continuous reading:** scroll through all pages and keep up to eight papers in tabs in one window.
@@ -36,7 +37,7 @@ Math-formatting example using local demonstration text:
 4. Open an English PDF with a text layer and select a complete sentence. The first context preparation may take longer and consume more plan usage; the resulting context and completed translations are reused locally.
 5. For a figure, use figure mode, capture the relevant area, add supporting text, and explicitly start interpretation.
 
-No separate API key, local language model, Node installation, or independently running server is needed for the packaged app. Reading remains available when the plan is disconnected. Each tester uses their own plan; no developer account, credentials, or shared quota are distributed. There is no automatic updater.
+No separate API key, local language model, Node installation, or independently running server is needed for the packaged app. Reading remains available when the plan is disconnected. Each tester uses their own plan; no developer account, credentials, or shared quota are distributed. Use Check for Updates to open the new installer download in your browser, then quit and replace the app in Applications.
 
 The Beta uses an **ad-hoc integrity signature**, not Apple Developer ID signing or notarization. If you trust the source, follow [Apple's app-specific opening instructions](https://support.apple.com/102445) and verify the Release's `SHA256SUMS`. Do not disable system protection. Managed devices may not allow an exception.
 
